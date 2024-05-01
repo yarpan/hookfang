@@ -4,6 +4,11 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+      # Allows external webhook trigger
+  repository_dispatch:
+    types:
+      - webhook
+
 jobs:
   test:
     timeout-minutes: 60
