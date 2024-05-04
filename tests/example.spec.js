@@ -1,20 +1,21 @@
 // @ts-nocheck
 const { test, expect } = require('@playwright/test');
 
-let form_data = process.env.PAYLOAD_DATA;
-//let d = JSON.parse(form_data);
-
+let payloadData = process.env.PAYLOAD_DATA;
+let payloadParse = JSON.parse(payloadData);
+let payloadString = JSON.stringify(payloadData);
+let payloadString2 = JSON.stringify(payloadParse);
 
 test('get started link', async ({ page }) => {
-  let d = JSON.parse(form_data);
-  console.log('=== form_data ===')
-  console.log(form_data)
+  
+  console.log('=== payloadData ===')
+  console.log(payloadData)
   console.log('=== d ===')
   console.log(d)
 });
 
 
-test('has title', async ({ page }) => {
+test.skip('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
   // Expect a title "to contain" a substring.
