@@ -24,7 +24,7 @@ jobs:
     - name: Run Playwright tests
       run: npx playwright test
       env:
-        FORM_DATA: ${{ toJson(github.event.client_payload.form_data) }}      
+        PAYLOAD_DATA: ${{ toJson(github.event.client_payload) }}      
     - uses: actions/upload-artifact@v4
       if: always()
       with:

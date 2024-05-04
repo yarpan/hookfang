@@ -1,7 +1,7 @@
 // @ts-nocheck
 const { test, expect } = require('@playwright/test');
 
-let form_data = process.env.FORM_DATA;
+let form_data = process.env.PAYLOAD_DATA;
 //let d = JSON.parse(form_data);
 
 
