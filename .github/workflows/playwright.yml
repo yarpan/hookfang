@@ -20,7 +20,8 @@ jobs:
     - name: Run Playwright tests
       run: npx playwright test
       env:
-        PAYLOAD_DATA: ${{ toJson(github.event.client_payload) }}      
+        WEBHOOK_PAYLOAD: ${{ toJson(github.event.client_payload) }}
+        WEBHOOK_OBJECT: ${{ toJson(github.event.client_payload.user_data) }}
     - uses: actions/upload-artifact@v4
       if: always()
       with:
