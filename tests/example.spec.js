@@ -11,6 +11,14 @@ let userData = process.env.WEBHOOK_OBJECT;
 
 test('get started link', async ({ page }) => {
   
+  console.log('\n=== payloadData.unit ===')
+  console.log(payloadData.unit)
+  console.log('\n=== userData.user_name ===')
+  console.log(userData.user_name)
+});
+
+test('get started link 2', async ({ page }) => {
+  
   console.log('\n=== payloadData ===')
   console.log(payloadData)
   console.log('\n=== userData ===')
